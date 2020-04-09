@@ -303,6 +303,7 @@
 			"MCSI-Offield 990339": kmlTimeLayer7,
 			"MCSI-Offield 990357": kmlTimeLayer8,
 			"MCSI-Offield 990363": kmlTimeLayer9,
+			"PIFG-LPRC 20139": kmlTimeLayer11,
 		};
 	L.control.layers(baseMaps,overlayMaps,{collapsed:true}).addTo(map);
 	
@@ -471,7 +472,7 @@ var tCtrlOn = 0,
 		if (eventLayer.name == 'Sea water velocity') {
 			map.removeControl(legendO);
 			if (tBlay == 0 && tOverlay < 1) {map.removeControl(timeDimensionControl);}
-		} else if (eventLayer.name == 'MCSI-Offield 890271' || eventLayer.name == 'MCSI-Offield 890272' || eventLayer.name == 'MCSI-Offield 890289' || eventLayer.name == 'MCSI-Offield 890381' || eventLayer.name == 'MCSI-Offield 990317' || eventLayer.name == 'MCSI-Offield 990333' || eventLayer.name == 'MCSI-Offield 990339' || eventLayer.name == 'MCSI-Offield 990357' || eventLayer.name == 'MCSI-Offield 990363') {
+		} else if (eventLayer.name == 'MCSI-Offield 890271' || eventLayer.name == 'MCSI-Offield 890272' || eventLayer.name == 'MCSI-Offield 890289' || eventLayer.name == 'MCSI-Offield 890381' || eventLayer.name == 'MCSI-Offield 990317' || eventLayer.name == 'MCSI-Offield 990333' || eventLayer.name == 'MCSI-Offield 990339' || eventLayer.name == 'MCSI-Offield 990357' || eventLayer.name == 'MCSI-Offield 990363' || eventLayer.name == 'PIFG-LPRC 20139') {
 			tOverlay = tOverlay - 1
 			if (tBlay == 0 && tOverlay < 1) {map.removeControl(timeDimensionControl);}			
 		}	

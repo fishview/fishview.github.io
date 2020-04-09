@@ -279,8 +279,24 @@
 
 	
 <!-- PSAT Tracks ---!>
-
     //Start and end dates
-	
+	var startTime = new Date('2016-06-03TT12:00:00.000Z'), endTime = new Date('2017-06-03TT12:00:00.000Z'), interval = 'P1D';
+	var Time11 = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
 	
 	//Tracks
+	var icon11 = L.icon({ 
+        iconUrl: 'css/images/icon11.png', 
+        iconSize: [80, 40], 
+        iconAnchor: [5, 25] }); 
+    var customLayer11 = L.geoJson(null, { 
+          pointToLayer: function (feature, latLng) { 
+            if (feature.properties.hasOwnProperty('last')) { 
+                return new L.Marker(latLng, { 
+                  icon: icon11 }); 
+            } 
+            return L.circleMarker(latLng); 
+        } 
+       });
+    var kmlLayer = omnivore.kml('data/PIFG01-20139-115409.kml', null, customLayer11); 
+    var kmlTimeLayer11 = L.timeDimension.layer.geoJson(kmlLayer, { 
+           updateTimeDimension: true, addlastPoint: true, waitForReady: true}); 
