@@ -294,15 +294,6 @@
 			'Coastline': coastline,		
 			'Ocean places': oceanLab,
 			'Exclusive Economic Zones': eez,
-			'MCSI-Offield 890271': kmlTimeLayer1,
-			'MCSI-Offield 890272': kmlTimeLayer2,
-			'MCSI-Offield 890289': kmlTimeLayer3,
-			'MCSI-Offield 890381': kmlTimeLayer4,
-			'MCSI-Offield 990317': kmlTimeLayer5,
-			'MCSI-Offield 990333': kmlTimeLayer6,
-			'MCSI-Offield 990339': kmlTimeLayer7,
-			'MCSI-Offield 990357': kmlTimeLayer8,
-			'MCSI-Offield 990363': kmlTimeLayer9,
 			'PIFG01-20139-115409': kmlTimeLayer11,
 			'PIFG02-16P1909-169364': kmlTimeLayer12,
 			'PIFG03-20573-117277': kmlTimeLayer13,
@@ -399,87 +390,6 @@ var tCtrlOn = 0,
 				map.timeDimension.setAvailableTimes(Time0, 'replace');
 			}
 			legendO.addTo(this);
-		} else if (eventLayer.name == 'MCSI-Offield 890271') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time1, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time1, 'replace');
-			}		
-		} else if (eventLayer.name == 'MCSI-Offield 890272') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time2, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time2, 'replace');
-			} 			
-		} else if (eventLayer.name == 'MCSI-Offield 890289') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time3, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time3, 'replace');
-			}		
-		} else if (eventLayer.name == 'MCSI-Offield 890381') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time4, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time4, 'replace');
-			} 			
-		} else if (eventLayer.name == 'MCSI-Offield 990317') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time5, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time5, 'replace');
-			}		
-		} else if (eventLayer.name == 'MCSI-Offield 990333') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time6, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time6, 'replace');
-			} 			
-		} else if (eventLayer.name == 'MCSI-Offield 990339') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time7, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time7, 'replace');
-			}		
-		} else if (eventLayer.name == 'MCSI-Offield 990357') {
-            tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time8, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time8, 'replace');
-			} 			
-        } else if (eventLayer.name == 'MCSI-Offield 990363') {
-			tOverlay = tOverlay + 1;
-			if (tCtrlOn == 0){
-				timeDimensionControl.addTo(this);
-			} else if (tBlay ==1 & tCtrlOn ==1) {
-				map.timeDimension.setAvailableTimes(Time9, 'union');
-			} else {
-				map.timeDimension.setAvailableTimes(Time9, 'replace');
-			}  			
 		} else if (eventLayer.name == 'PIFG01-20139-115409') {
             tOverlay = tOverlay + 1;
             if (tCtrlOn == 0){
@@ -631,7 +541,7 @@ var tCtrlOn = 0,
 		if (eventLayer.name == 'Sea water velocity') {
 			map.removeControl(legendO);
 			if (tBlay == 0 && tOverlay < 1) {map.removeControl(timeDimensionControl);}
-		} else if (eventLayer.name == 'MCSI-Offield 890271' || eventLayer.name == 'MCSI-Offield 890272' || eventLayer.name == 'MCSI-Offield 890289' || eventLayer.name == 'MCSI-Offield 890381' || eventLayer.name == 'MCSI-Offield 990317' || eventLayer.name == 'MCSI-Offield 990333' || eventLayer.name == 'MCSI-Offield 990339' || eventLayer.name == 'MCSI-Offield 990357' || eventLayer.name == 'MCSI-Offield 990363' || eventLayer.name == 'PIFG-LPRC 20139' || eventLayer.name == 'PIFG01-20139-115409' || eventLayer.name == 'PIFG02-16P1909-169364' || eventLayer.name == 'PIFG03-20573-117277' || eventLayer.name == 'PIFG04-16P1849-169355' || eventLayer.name == 'PIFG05-20138-115408' || eventLayer.name == 'PIFG06-16P1579-167346' || eventLayer.name == 'PIFG07-16P1855-169356' || eventLayer.name == 'PIFG08-16P1580-167347' || eventLayer.name == 'PIFG09-16P1587-167351' || eventLayer.name == 'PIFG10-16P1896-169361' || eventLayer.name == 'PIFG11-16P1916-169365' || eventLayer.name == 'PIFG12-16P2435-172777' || eventLayer.name == 'PIFG13-17P0206-172780' || eventLayer.name == 'PIFG14-17P0213-172782' || eventLayer.name == 'PIFG15-16P1903-169363' || eventLayer.name == 'PIFG16-17P0212-172781') {
+		} else if (eventLayer.name == 'PIFG-LPRC 20139' || eventLayer.name == 'PIFG01-20139-115409' || eventLayer.name == 'PIFG02-16P1909-169364' || eventLayer.name == 'PIFG03-20573-117277' || eventLayer.name == 'PIFG04-16P1849-169355' || eventLayer.name == 'PIFG05-20138-115408' || eventLayer.name == 'PIFG06-16P1579-167346' || eventLayer.name == 'PIFG07-16P1855-169356' || eventLayer.name == 'PIFG08-16P1580-167347' || eventLayer.name == 'PIFG09-16P1587-167351' || eventLayer.name == 'PIFG10-16P1896-169361' || eventLayer.name == 'PIFG11-16P1916-169365' || eventLayer.name == 'PIFG12-16P2435-172777' || eventLayer.name == 'PIFG13-17P0206-172780' || eventLayer.name == 'PIFG14-17P0213-172782' || eventLayer.name == 'PIFG15-16P1903-169363' || eventLayer.name == 'PIFG16-17P0212-172781') {
 			tOverlay = tOverlay - 1
 			if (tBlay == 0 && tOverlay < 1) {map.removeControl(timeDimensionControl);}			
 		}	
