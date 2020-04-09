@@ -294,6 +294,7 @@
 			'Coastline': coastline,		
 			'Ocean places': oceanLab,
 			'Exclusive Economic Zones': eez,
+			"Sea water velocity": ovel,
 			'PIFG01-20139-115409': kmlTimeLayer11,
 			'PIFG02-16P1909-169364': kmlTimeLayer12,
 			'PIFG03-20573-117277': kmlTimeLayer13,

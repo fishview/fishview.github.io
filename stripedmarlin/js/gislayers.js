@@ -5,7 +5,7 @@ var world = L.tileLayer.provider('Esri.WorldImagery',{opacity:1}),
 	ocean = L.esri.basemapLayer("Oceans"),
 	oceanLab = L.esri.basemapLayer("OceansLabels"),
 	greymap = L.esri.basemapLayer("Gray");
-
+	
 var coastline = L.tileLayer.wms("http://ows.emodnet-bathymetry.eu/wms", {
         layers: 'coastlines',
         format: 'image/png',
@@ -13,7 +13,7 @@ var coastline = L.tileLayer.wms("http://ows.emodnet-bathymetry.eu/wms", {
         attribution: "EMODnet Bathymetry",
         opacity: 1
     });
-
+		
 var	eez = L.tileLayer.wms('http://geo.vliz.be/geoserver/MarineRegions/wms?', {
 		layers: 'MarineRegions:eez_boundaries',
 		opacity: 1,
@@ -111,41 +111,20 @@ var sst2 = L.tileLayer.wms(alink,
 		
 <!-- EU Copernicus ---!>
 // http://marine.copernicus.eu/services-portfolio/access-to-products/
+
 // ------------------------------		
-// Velocity
+// // Sea water velocity
 // ------------------------------
-		
-//GLOBAL_REP_PHY_001_021 - S T UVG SSH SSD 0.25 degree x 0.25 degree (33 depth levels) From 1993-01-01 to 2016-12-21 weekly-mean, monthly-mean
-//GLOBAL OBSERVED OCEAN PHYSICS TEMPERATURE SALINITY HEIGHTS GEOSTROPHIC CURRENTS SEA SURFACE SALINITY AND SEA SURFACE DENSITY REPROCESSING (1993-2016)
+// http://my.cmems-du.eu/thredds/wms/global-reanalysis-phy-001-030-daily?service=WMS&request=GetCapabilities
 
-var dlink = 'http://tds.mfcglo-obs.cls.fr/thredds/wms/dataset-armor-3d-rep-weekly',
-		dlayer = 'geostrophic_sea_water_velocity',
-		cc = '0%2C1.0',
-		ee = '0',
-		tt = '2016-07-06T00:00:00.000Z',
-		ss = 'stumpvec'
-		pp = 'greyscale';
-		
-// GLOBAL_ANALYSIS_PHYS_001_020 - T S SSH 3DUV 0.25 degree x 0.25 degree (33 depth levels) From 2014-01-01 to Present weekly-mean
-// GLOBAL OBSERVED OCEAN PHYSICS TEMPERATURE SALINITY HEIGHTS AND GEOSTROPHIC CURRENTS PROCESSING
-// http://marine.copernicus.eu/services-portfolio/access-to-products/?option=com_csw&view=details&product_id=GLOBAL_ANALYSIS_PHYS_001_020
-
-	//dlink = 'http://tds.mfcglo-obs.cls.fr/thredds/wms/dataset-armor-3d-v4-cmems-v2',
-		//dlayer = 'sea_water_velocity',
-
-//  GLOBAL_ANALYSIS_FORECAST_PHY_001_024 - MLD SSH 3DUV SIT S SIUV SIC T bottomT 0.083 degree x 0.083 degree (50 depth levels) From 2006-12-27 to Present daily-mean, hourly-mean
-// http://nrt.cmems-du.eu/thredds/wms/global-analysis-forecast-phy-001-024?service=WMS&request=GetCapabilities
-// GLOBAL OCEAN 1/12° PHYSICS ANALYSIS AND FORECAST UPDATED DAILY
-
-	dlink = 'http://nrt.cmems-du.eu/thredds/wms/global-analysis-forecast-phy-001-024',
+var dlink = 'http://my.cmems-du.eu/thredds/wms/global-reanalysis-phy-001-030-daily',
 		dlayer = 'sea_water_velocity',
+		cc = '0%2C1.0',
+		ss = 'stumpvec',
 		ee = '-0.49402499198913574',
 		tt = '2016-07-04T12:00:00.000Z',
 		pp = 'greyscale';
 
-		
-// Sea water velocity
-// ------------------------------
 var ovel = L.tileLayer.wms(dlink, 
 		{
 			layers: dlayer,
@@ -153,7 +132,6 @@ var ovel = L.tileLayer.wms(dlink,
 			transparent: 'TRUE', NUMCOLORBANDS:'250', COLORSCALERANGE: cc, ELEVATION: ee, time: tt,
 			abovemaxcolor:'extend', belowmincolor:'extend',
 		});		
-
 
 // ------------------------------		
 // Mixed layer depth
