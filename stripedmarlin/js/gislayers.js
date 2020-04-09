@@ -48,22 +48,7 @@ var grid = L.latlngGraticule({
         {start: 3, end: 7, interval: 10},
         {start: 8, end: 10, interval: 5}
     ]
-});  
-
-var afad = L.esri.featureLayer({
-        url: "https://geodata.hawaii.gov/arcgis/rest/services/CoastalMarine/MapServer/3",
-		pointToLayer: function (geojson, latlng) {
-			return L.marker(latlng, {
-			  icon: L.icon({
-				iconUrl: 'css/images/fad-icon.png'
-			  })
-			});
-		  },
-      });
-var popupTemplate = "<h3>FAD {name}</h3>{island}<br>";
-afad.bindPopup(function(e){
-        return L.Util.template(popupTemplate, e.feature.properties)
-      });
+});    
   
 <!-- NASA GIBS ---!>
 // https://map1.vis.earthdata.nasa.gov/colormaps/output/

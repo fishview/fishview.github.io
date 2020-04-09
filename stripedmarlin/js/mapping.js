@@ -291,7 +291,7 @@
 		
 <!-- Layer control -->		
 	var overlayMaps = {
-			'Coastline': coastline,		
+			'Coastline': coastline,
 			'Ocean places': oceanLab,
 			'Exclusive Economic Zones': eez,
 			"Sea water velocity": ovel,
