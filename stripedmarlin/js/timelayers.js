@@ -80,7 +80,7 @@
 	var icon11 = L.icon({ 
         iconUrl: 'css/images/icon11.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer11 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -97,7 +97,7 @@
 	var icon12 = L.icon({ 
         iconUrl: 'css/images/icon12.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer12 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -114,7 +114,7 @@
 	var icon13 = L.icon({ 
         iconUrl: 'css/images/icon13.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer13 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -131,7 +131,7 @@
 	var icon14 = L.icon({ 
         iconUrl: 'css/images/icon14.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer14 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -148,7 +148,7 @@
 	var icon15 = L.icon({ 
         iconUrl: 'css/images/icon15.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer15 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -165,7 +165,7 @@
 	var icon16 = L.icon({ 
         iconUrl: 'css/images/icon16.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer16 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -182,7 +182,7 @@
 	var icon17 = L.icon({ 
         iconUrl: 'css/images/icon17.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer17 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -199,7 +199,7 @@
 	var icon18 = L.icon({ 
         iconUrl: 'css/images/icon18.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer18 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -216,7 +216,7 @@
 	var icon19 = L.icon({ 
         iconUrl: 'css/images/icon19.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer19 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -233,7 +233,7 @@
 	var icon20 = L.icon({ 
         iconUrl: 'css/images/icon20.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer20 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -250,7 +250,7 @@
 	var icon21 = L.icon({ 
         iconUrl: 'css/images/icon21.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer21 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -267,7 +267,7 @@
 	var icon22 = L.icon({ 
         iconUrl: 'css/images/icon22.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer22 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -284,7 +284,7 @@
 	var icon23 = L.icon({ 
         iconUrl: 'css/images/icon23.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer23 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -301,7 +301,7 @@
 	var icon24 = L.icon({ 
         iconUrl: 'css/images/icon24.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer24 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -318,7 +318,7 @@
 	var icon25 = L.icon({ 
         iconUrl: 'css/images/icon25.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer25 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
@@ -335,7 +335,7 @@
 	var icon26 = L.icon({ 
         iconUrl: 'css/images/icon26.png', 
         iconSize: [80, 40], 
-        iconAnchor: [5, 25] }); 
+        iconAnchor: [-15, 25] }); 
     var customLayer26 = L.geoJson(null, { 
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
