@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <kml xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2">
+ <Folder>
+ <name>PIFG06.16P1579.167346</name>
+ <Placemark>
+ <gx:Track>
+ <when>2018-05-28T12:00:00Z</when>
+ <when>2018-05-29T12:00:00Z</when>
+ <when>2018-05-30T12:00:00Z</when>
+ <when>2018-05-31T12:00:00Z</when>
+ <when>2018-06-01T12:00:00Z</when>
+ <when>2018-06-02T12:00:00Z</when>
+ <when>2018-06-03T12:00:00Z</when>
+ <when>2018-06-04T12:00:00Z</when>
+ <when>2018-06-05T12:00:00Z</when>
+ <when>2018-06-06T12:00:00Z</when>
+ <when>2018-06-07T12:00:00Z</when>
+ <when>2018-06-08T12:00:00Z</when>
+ <when>2018-06-09T12:00:00Z</when>
+ <when>2018-06-10T12:00:00Z</when>
+ <when>2018-06-11T12:00:00Z</when>
+ <when>2018-06-12T12:00:00Z</when>
+ <when>2018-06-13T12:00:00Z</when>
+ <when>2018-06-14T12:00:00Z</when>
+ <when>2018-06-15T12:00:00Z</when>
+ <when>2018-06-16T12:00:00Z</when>
+ <when>2018-06-17T12:00:00Z</when>
+ <when>2018-06-18T12:00:00Z</when>
+ <when>2018-06-19T12:00:00Z</when>
+ <when>2018-06-20T12:00:00Z</when>
+ <when>2018-06-21T12:00:00Z</when>
+ <when>2018-06-22T12:00:00Z</when>
+ <when>2018-06-23T12:00:00Z</when>
+ <when>2018-06-24T12:00:00Z</when>
+ <when>2018-06-25T12:00:00Z</when>
+ <when>2018-06-26T12:00:00Z</when>
+ <when>2018-06-27T12:00:00Z</when>
+ <when>2018-06-28T12:00:00Z</when>
+ <when>2018-06-29T12:00:00Z</when>
+ <when>2018-06-30T12:00:00Z</when>
+ <when>2018-07-01T12:00:00Z</when>
+ <when>2018-07-02T12:00:00Z</when>
+ <when>2018-07-03T12:00:00Z</when>
+ <when>2018-07-04T12:00:00Z</when>
+ <when>2018-07-05T12:00:00Z</when>
+ <when>2018-07-06T12:00:00Z</when>
+ <when>2018-07-07T12:00:00Z</when>
+ <when>2018-07-08T12:00:00Z</when>
+ <when>2018-07-09T12:00:00Z</when>
+ <when>2018-07-10T12:00:00Z</when>
+ <when>2018-07-11T12:00:00Z</when>
+ <when>2018-07-12T12:00:00Z</when>
+ <when>2018-07-13T12:00:00Z</when>
+ <when>2018-07-14T12:00:00Z</when>
+ <when>2018-07-15T12:00:00Z</when>
+ <when>2018-07-16T12:00:00Z</when>
+ <when>2018-07-17T12:00:00Z</when>
+ <when>2018-07-18T12:00:00Z</when>
+ <when>2018-07-19T12:00:00Z</when>
+ <when>2018-07-26T12:00:00Z</when>
+ <gx:coord>-153.655 24.147 0</gx:coord>
+ <gx:coord>-153.287850632 23.5866679977 0</gx:coord>
+ <gx:coord>-153.219875146 23.3708798395 0</gx:coord>
+ <gx:coord>-153.07338725 23.109251535 0</gx:coord>
+ <gx:coord>-153.249874302 22.6412004904 0</gx:coord>
+ <gx:coord>-153.247242471 22.3838609275 0</gx:coord>
+ <gx:coord>-153.132371549 22.3864779977 0</gx:coord>
+ <gx:coord>-152.982938912 22.3716267557 0</gx:coord>
+ <gx:coord>-152.759671416 22.4230584408 0</gx:coord>
+ <gx:coord>-152.601897291 22.2494441281 0</gx:coord>
+ <gx:coord>-152.081159749 22.2166690008 0</gx:coord>
+ <gx:coord>-151.766795888 22.3962847567 0</gx:coord>
+ <gx:coord>-151.911283261 22.084694854 0</gx:coord>
+ <gx:coord>-151.749071799 21.5391346637 0</gx:coord>
+ <gx:coord>-151.576966161 21.3842076643 0</gx:coord>
+ <gx:coord>-151.333084239 21.4607636989 0</gx:coord>
+ <gx:coord>-150.863183568 21.6381528831 0</gx:coord>
+ <gx:coord>-150.307491177 22.1136596548 0</gx:coord>
+ <gx:coord>-149.909548254 22.6396467921 0</gx:coord>
+ <gx:coord>-149.871795271 22.847160867 0</gx:coord>
+ <gx:coord>-149.811144091 23.1588896247 0</gx:coord>
+ <gx:coord>-149.594788471 23.7733277022 0</gx:coord>
+ <gx:coord>-149.567756011 23.7493677316 0</gx:coord>
+ <gx:coord>-149.714952925 23.7167032618 0</gx:coord>
+ <gx:coord>-149.914298098 24.0261657191 0</gx:coord>
+ <gx:coord>-150.220280903 24.0479724253 0</gx:coord>
+ <gx:coord>-150.392367128 23.788687752 0</gx:coord>
+ <gx:coord>-150.548177179 23.6256108606 0</gx:coord>
+ <gx:coord>-150.724550248 24.1532945908 0</gx:coord>
+ <gx:coord>-150.593600934 25.2173612803 0</gx:coord>
+ <gx:coord>-150.975250521 25.8114078753 0</gx:coord>
+ <gx:coord>-150.994326863 26.2585048367 0</gx:coord>
+ <gx:coord>-151.000269249 26.1017208646 0</gx:coord>
+ <gx:coord>-151.15452357 26.1051110144 0</gx:coord>
+ <gx:coord>-151.376804527 26.2456753582 0</gx:coord>
+ <gx:coord>-151.440568548 26.1139201935 0</gx:coord>
+ <gx:coord>-151.262238495 26.1905620971 0</gx:coord>
+ <gx:coord>-151.22998863 26.6167395524 0</gx:coord>
+ <gx:coord>-151.124498212 27.2276577839 0</gx:coord>
+ <gx:coord>-151.135702397 27.7601089745 0</gx:coord>
+ <gx:coord>-151.419966504 27.6716741948 0</gx:coord>
+ <gx:coord>-151.651037447 27.6931735146 0</gx:coord>
+ <gx:coord>-151.668804809 27.7839097631 0</gx:coord>
+ <gx:coord>-151.452522836 27.7762646848 0</gx:coord>
+ <gx:coord>-151.302368801 28.1393786274 0</gx:coord>
+ <gx:coord>-150.949240133 28.6654352656 0</gx:coord>
+ <gx:coord>-151.036794227 29.0844154952 0</gx:coord>
+ <gx:coord>-151.006840206 29.7227643827 0</gx:coord>
+ <gx:coord>-151.079442148 29.9993285665 0</gx:coord>
+ <gx:coord>-151.283546781 29.8033422614 0</gx:coord>
+ <gx:coord>-151.076234605 29.4570332403 0</gx:coord>
+ <gx:coord>-150.915606478 28.1250383398 0</gx:coord>
+ <gx:coord>-151.085554787 26.5612823619 0</gx:coord>
+ <gx:coord>-153.509064109 36.845 0</gx:coord>
+ </gx:Track>
+ </Placemark>
+ </Folder>
+ </kml>
