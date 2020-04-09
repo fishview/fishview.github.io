@@ -173,12 +173,10 @@ var dO2 = L.tileLayer.wms(blink,
 var blayer = 'chl',
 	bcc = '0.01%2C4.6416',
 	bpp = 'ferret';	
-	// Updated Oct 19, 2019
-	var blink = 'http://my.cmems-du.eu/thredds/wms/global-reanalysis-bio-001-029-daily',
+// Temporal range from 1993-01-01 to 2018-12-25
+var blink = 'http://my.cmems-du.eu/thredds/wms/global-reanalysis-bio-001-029-daily',
 		bee = '-0.5057600140571594', 
 		btt = '2016-07-16T12:00:00.000Z';
-	// Temporal range from 1993-01-01 to 2018-12-25
-	
 var chla0 = L.tileLayer.wms(blink, 
 		{
 			layers: blayer,
@@ -187,40 +185,14 @@ var chla0 = L.tileLayer.wms(blink,
 			abovemaxcolor:'extend', belowmincolor:'extend',
 		});		
 
-
-// Chlorophyll
-// ------------------------------
-	var blink = 'http://cmems-oc.isac.cnr.it/thredds/wms/dataset-oc-glo-chl-multi-l4-gsm_4km_monthly-rep-v02',
-		btt = '2016-06-01T00:00:00.000Z';
-		
-var chla = L.tileLayer.wms(blink, 
-		{
-			layers: blayer,
-			format: 'image/png', styles: 'boxfill/' + bpp, opacity: 1, 
-			transparent: 'TRUE', NUMCOLORBANDS:'250', COLORSCALERANGE: bcc, time: btt,
-			abovemaxcolor:'extend', belowmincolor:'extend',
-		});
-
-	var blink = 'http://cmems-oc.isac.cnr.it/thredds/wms/dataset-oc-glo-chl-multi-l4-gsm_4km_monthly-rt-v02',
-		btt = '2017-06-01T00:00:00.000Z';
-		
+		// Temporal range from 2018-04-01 to present
+var blink = 'http://nrt.cmems-du.eu/thredds/wms/global-analysis-forecast-bio-001-028-daily',
+		bee = '-0.49402499198913574',
+		btt = '2019-07-16T12:00:00.000Z';		
 var chla1 = L.tileLayer.wms(blink, 
 		{
 			layers: blayer,
 			format: 'image/png', styles: 'boxfill/' + bpp, opacity: 1, 
-			transparent: 'TRUE', NUMCOLORBANDS:'250', COLORSCALERANGE: bcc, time: btt,
+			transparent: 'TRUE', NUMCOLORBANDS:'250', COLORSCALERANGE: bcc, ELEVATION: bee, time: btt,
 			abovemaxcolor:'extend', belowmincolor:'extend',
-		});
-
-	var blink = 'http://cmems-oc.isac.cnr.it/thredds/wms/dataset-oc-glo-chl-multi-l4-gsm_4km_8days-rep-v02',
-		btt = '2016-06-01T00:00:00.000Z';
-		
-var chla2 = L.tileLayer.wms(blink, 
-		{
-			layers: blayer,
-			format: 'image/png', styles: 'boxfill/' + bpp, opacity: 1, 
-			transparent: 'TRUE', NUMCOLORBANDS:'250', COLORSCALERANGE: bcc, time: btt,
-			abovemaxcolor:'extend', belowmincolor:'extend',
-		});
-
-		
+		});		

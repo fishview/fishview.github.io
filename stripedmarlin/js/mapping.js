@@ -18,6 +18,7 @@
 			"Ocean basemap": ocean,
 			"Sea surface temperature": TimeLayer2,
 			"Chlorophyll a": TimeLayer1,
+			"Chlorophyll a after 2018": TimeLayerA,
 			"Oxygen at 120 m": TimeLayer4,
 			"Mixed layer thickness": TimeLayer5,
 	};		
@@ -307,6 +308,15 @@ var tCtrlOn = 0,
 			tCtrlOn = 1;
 			tBay = 1;
 			legendB.addTo(this);
+		} else if (eventLayer.name == 'Chlorophyll a after 2018') {
+			map.removeControl(legendA);
+			map.removeControl(legendC);
+			map.removeControl(legendD);
+			if (tOverlay == 0) map.timeDimension.setAvailableTimes(TimeA, 'replace');
+			timeDimensionControl.addTo(this);
+			tCtrlOn = 1;
+			tBay = 1;
+			legendB.addTo(this);			
 		} else if (eventLayer.name == 'Sea surface temperature'){
 			map.removeControl(legendB);
 			map.removeControl(legendC);

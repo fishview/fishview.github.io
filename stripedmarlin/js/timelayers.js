@@ -4,9 +4,17 @@
 		endTime = new Date('2015-12-31T12:00:00.000Z'),
 		interval = "P3D";
     var Time0 = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
+
+	var startTime = new Date('2019-01-01T12:00:00.000Z'),
+		endTime = new Date('2019-12-31T12:00:00.000Z'),
+		interval = "P3D";
+    var TimeA = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
 	
 	// Chlorophyll		
 	var TimeLayer1 = L.timeDimension.layer.wms(chla0, {
+		updateTimeDimension: false,
+	});
+	var TimeLayerA = L.timeDimension.layer.wms(chla1, {
 		updateTimeDimension: false,
 	});
 	// SST
