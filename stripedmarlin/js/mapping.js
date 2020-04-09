@@ -27,18 +27,18 @@
 	var but1 = L.easyButton({
 		states: [{
 				stateName: 'zoom1',
-				icon:      '<span class="mybutton">&larrfs;</span>',
+				icon:      '<span class="mybutton">&curarr;</span>',
 				title:     'Zoom to Hawaii',
 				onClick: function(btn, map) {       
-					map.setView([24,-158],7);
+					map.setView([24,-150],5);
 					btn.state('zoom2');
 				}
 			}, {
 				stateName: 'zoom2',
-				icon:      '<span class="mybutton">&rarrfs;</span>',
+				icon:      '<span class="mybutton">&cularr;</span>',
 				title:     'Zoom out to the Pacific Ocean',
 				onClick: function(btn, map) {
-					map.setView([26,-145],5);
+					map.setView([10,-170],4);
 					btn.state('zoom1');
 				}
 		}]
@@ -66,17 +66,19 @@
 		states: [{
 				stateName: 'zoom1',
 				icon:      '<span class="mybutton">&rarrfs;</span>',
-				title:     'Turn OFF Japanese tags',
+				title:     'Turn OFF start/end points',
 				onClick: function(btn) {       
 					migrationLayer1.hide();
+					map.removeControl(legend)
 					btn.state('zoom2');
 				}
 			}, {
 				stateName: 'zoom2',
 				icon:      '<span class="mybutton">&larrfs;</span>',
-				title:     'Turn ON Japanese tags',
+				title:     'Turn ON start/end points',
 				onClick: function(btn) {
 					migrationLayer1.show();
+					legend.addTo(map);
 					btn.state('zoom1');
 				}
 		}]
@@ -139,8 +141,8 @@
 		}]
 	});
 	
-	var bbar = L.easyBar([butL1,butL2,butL3,butL4]);
-	//bbar.addTo(map);	      
+	var bbar = L.easyBar([but1, butL1]);
+	bbar.addTo(map);	      
 
 <!-- Mouse position -->
   L.control.mousePosition({position: 'bottomleft'}).addTo(map);
@@ -149,8 +151,8 @@
 	// L.control.banner().addTo(map); // Intro banner
 	L.control.logo().addTo(map); // LPRC
 	L.control.logo2().addTo(map); // PIFG
-	L.control.logo3().addTo(map); // MCSI
-	L.control.logo4().addTo(map); // Offield
+	//L.control.logo3().addTo(map); // MCSI
+	//L.control.logo4().addTo(map); // Offield
 	
 <!-- Animation -->
     var prad = .01; //30
@@ -165,61 +167,25 @@
 		arcLabelFont:'10px sans-serif',
 		}
 	);
-	//migrationLayer1.addTo(map)
-	var migrationLayer2 = new L.migrationLayer({
-		map: map,
-		data: data2,
-		pulseRadius: prad,
-		pulseBorderWidth: pbw,
-		arcWidth:2,
-		arcLabel:true,
-		arcLabelFont:'10px sans-serif',
-		}
-	);
-	//migrationLayer2.addTo(map)	
-	var migrationLayer3 = new L.migrationLayer({
-		map: map,
-		data: data3,
-		pulseRadius: prad,
-		pulseBorderWidth: pbw,
-		arcWidth:2,
-		arcLabel:true,
-		arcLabelFont:'10px sans-serif',
-		}
-	);
-	//migrationLayer3.addTo(map)
-	var migrationLayer4 = new L.migrationLayer({
-		map: map,
-		data: data4,
-		pulseRadius: prad,
-		pulseBorderWidth: pbw,
-		arcWidth:2,
-		arcLabel:true,
-		arcLabelFont:'10px sans-serif',
-		}
-	);
-	//migrationLayer4.addTo(map)	
-			
+	migrationLayer1.addTo(map)
+
 <!-- Legend -->
 	function getColor(d) {
-		return d > 7 ? '#FF6EB4' :
-			   d > 6  ? '#FF0000' :
-			   d > 5  ? '#FFFF00' :
-			   d > 4  ? '#FFD200' :
-			   d > 3  ? '#00FF00' :
-			   d > 2  ? '#008B00' :
-			   d > 1  ? '#00FFFF' :
+		return d > 11 ? '#de0063' :
+			   d > 8  ? '#FFE000' :
+			   d > 2  ? '#00a872' :
+			   d > 1  ? '#0086b6' :
 						'#9A32CD';
 	}
 	var legend = L.control({position: 'topright'});
 	legend.onAdd = function (map) {
 
 		var div = L.DomUtil.create('div', 'info legend'),
-			grades = [0, 1, 2, 3, 4, 5, 6, 7],
+			grades = [1, 3, 9, 12],
 			labels = [];
 
 		// loop through our density intervals and generate a label with a colored square for each interval
-		div.innerHTML = '<h4>Weeks at liberty</h4>' 
+		div.innerHTML = '<h4>Months at liberty</h4>' 
 		for (var i = 0; i < grades.length; i++) {
 			div.innerHTML +=
 				'<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
@@ -228,7 +194,7 @@
 
 		return div;
 	};
-//	legend.addTo(map);
+	legend.addTo(map);
 
 <!-- Satellite layer legend -->
 	// Base layer

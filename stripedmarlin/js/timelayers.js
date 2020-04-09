@@ -73,7 +73,7 @@
 	var startTime = new Date('2019-04-30TT12:00:00.000Z'), endTime = new Date('2019-08-22TT12:00:00.000Z'), interval = 'P1D';
 	var Time25 = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
 
-	var startTime = new Date('2019-05-04TT12:00:00.000Z'), endTime = new Date('2020-02-23TT12:00:00.000Z'), interval = 'P1D';
+	var startTime = new Date('2019-05-04TT12:00:00.000Z'), endTime = new Date('2019-12-29TT12:00:00.000Z'), interval = 'P1D';
 	var Time26 = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
 
 	//Tracks
