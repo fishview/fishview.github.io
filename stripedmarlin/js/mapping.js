@@ -14,6 +14,7 @@
 <!-- Basemaps ---!>
 	var baseMaps = {
 			"Grayscale": greymap,
+			//"Open Street Map": street,
 			"Bathymetry": world,
 			"Ocean basemap": ocean,
 			"Sea surface temperature": TimeLayer2,

@@ -5,6 +5,10 @@ var world = L.tileLayer.provider('Esri.WorldImagery',{opacity:1}),
 	ocean = L.esri.basemapLayer("Oceans"),
 	oceanLab = L.esri.basemapLayer("OceansLabels"),
 	greymap = L.esri.basemapLayer("Gray");
+
+var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+  });
 	
 var coastline = L.tileLayer.wms("http://ows.emodnet-bathymetry.eu/wms", {
         layers: 'coastlines',
