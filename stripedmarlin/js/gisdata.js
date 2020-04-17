@@ -19,3 +19,14 @@
 {"from":[-153.69,16.04],"to":[-155.01,24.64],"labels":[null,null],"color":"#00a872"},
 {"from":[-153.62,16.2],"to":[-141.95,13.25],"labels":[null,null],"color":"#ffe000"},	
 	];
+
+// Predation incidents
+var iconp = L.icon({ 
+        iconUrl: 'css/images/deadfish.png', 
+        iconSize: [40, 40], 
+        iconAnchor: [5, 25] }); 
+var pg13 = L.marker([23.1282,-139.149], {icon: iconp}),
+    pg14 = L.marker([27.96611,-148.689], {icon: iconp}),
+	pg22 = L.marker([29.43701,-161.38], {icon: iconp}),
+	pg25 = L.marker([23.69178,-148.056], {icon: iconp});
+var predation = L.layerGroup([pg13, pg14, pg22, pg25]);

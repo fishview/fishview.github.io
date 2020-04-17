@@ -204,7 +204,7 @@
 			position: 'bottomleft'
 		});
 		legendA.onAdd = function(map) {
-			var src = alink + '?REQUEST=GetLegendGraphic&LAYER=' + alayer + '&PALETTE=' + app + '&COLORSCALERANGE=' + '17%2C32';
+			var src = alink + '?REQUEST=GetLegendGraphic&LAYER=' + alayer + '&PALETTE=' + app + '&COLORSCALERANGE=' + '16%2C32';
 			var div = L.DomUtil.create('div', 'info legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
@@ -260,9 +260,11 @@
 <!-- Layer control -->		
 	var overlayMaps = {
 			'Coastline': coastline,
+			'Grid lines': grid,
 			'Ocean places': oceanLab,
 			'Exclusive Economic Zones': eez,
 			"Sea water velocity": ovel,
+			"Predation locations": predation,
 			'PIFG01-20139-115409': kmlTimeLayer11,
 			'PIFG02-16P1909-169364': kmlTimeLayer12,
 			'PIFG03-20573-117277': kmlTimeLayer13,

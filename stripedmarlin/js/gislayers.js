@@ -82,7 +82,7 @@ var sst = L.tileLayer(template, {
 var alink = 'http://oceanwatch.pfeg.noaa.gov/thredds/wms/satellite/MUR41/ssta/1day',
 	app = 'sst32',
 		alayer = 'analysed_sst',
-		acc = '289.15%2C305.15', 
+		acc = '289.15%2C305.15', // 16 to 32 C
 		att = '2016-08-01T09:00:00.000Z';
 
 	alink = 'http://nrt.cmems-du.eu/thredds/wms/METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2';
