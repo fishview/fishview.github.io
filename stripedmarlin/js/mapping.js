@@ -291,6 +291,7 @@
 				position: 'bottomleft',
 				playReverseButton: true,				
 				minSpeed: 1,
+				maxSpeed: 20,
 				speedStep: 1,				
 				autoPlay: true,
 				playerOptions: {
