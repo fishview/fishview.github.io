@@ -16,6 +16,7 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
         this._updateTimeDimension = this.options.updateTimeDimension || false;
         this._setDefaultTime = this.options.setDefaultTime || false;
         this._updateTimeDimensionMode = this.options.updateTimeDimensionMode || 'intersect'; // 'union' or 'replace'
+        this._period = this.options.period || null;
         this._layers = {};
         this._defaultTime = 0;
         this._availableTimes = [];
@@ -60,6 +61,9 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
 
     isReady: function(time) {
         var layer = this._getLayerForTime(time);
+        if (this.options.bounds && this._map)
+            if (!this._map.getBounds().contains(this.options.bounds))
+                return true;
         return layer.isLoaded();
     },
 
@@ -99,7 +103,7 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
             }
         }
     },
-    
+
     setZIndex: function(zIndex){
         L.TimeDimension.Layer.prototype.setZIndex.apply(this, arguments);
         // apply to all preloaded caches
@@ -185,7 +189,7 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
         }
 
         var newLayer = this._createLayerForTime(nearestTime);
-       
+
         this._layers[time] = newLayer;
 
         newLayer.on('load', (function(layer, time) {
@@ -212,7 +216,7 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
         }).bind(newLayer);
         return newLayer;
     },
-    
+
     _createLayerForTime:function(time){
         var wmsParams = this._baseLayer.options;
         wmsParams.time = new Date(time).toISOString();
@@ -253,15 +257,22 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
         var url = this._getCapabilitiesUrl();
         if (this._proxy) {
             url = this._proxy + '?url=' + encodeURIComponent(url);
-        }         
-        $.get(url, (function(data) {
-            this._defaultTime = Date.parse(this._getDefaultTimeFromCapabilities(data));
-            this._setDefaultTime = this._setDefaultTime || (this._timeDimension && this._timeDimension.getAvailableTimes().length == 0);
-            this.setAvailableTimes(this._parseTimeDimensionFromCapabilities(data));
-            if (this._setDefaultTime && this._timeDimension) {
-                this._timeDimension.setCurrentTime(this._defaultTime);
+        }
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", (function(xhr) {
+            var data = xhr.currentTarget.responseXML;
+            if (data !== null){
+                this._defaultTime = Date.parse(this._getDefaultTimeFromCapabilities(data));
+                this._setDefaultTime = this._setDefaultTime || (this._timeDimension && this._timeDimension.getAvailableTimes().length == 0);
+                this.setAvailableTimes(this._parseTimeDimensionFromCapabilities(data));
+                if (this._setDefaultTime && this._timeDimension) {
+                    this._timeDimension.setCurrentTime(this._defaultTime);
+                }
             }
         }).bind(this));
+        oReq.overrideMimeType('application/xml');
+        oReq.open("GET", url);
+        oReq.send();
     },
 
     _getCapabilitiesUrl: function() {
@@ -278,52 +289,55 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
     },
 
     _parseTimeDimensionFromCapabilities: function(xml) {
-        var layers = $(xml).find('Layer[queryable="1"]');
+        var layers = xml.querySelectorAll('Layer[queryable="1"]');
         var layerName = this._baseLayer.wmsParams.layers;
-        if (this._getCapabilitiesAlternateLayerName)
-            layerName = this._getCapabilitiesAlternateLayerName;
-        var layerNameElement = layers.find("Name").filter(function(index) {
-            return $(this).text() === layerName;
-        });
+        var layer = null;
         var times = null;
-        if (layerNameElement) {
-            var layer = layerNameElement.parent();
+
+        layers.forEach(function(current) {
+            if (current.querySelector("Name").innerHTML === layerName) {
+                layer = current;
+            }
+        })
+        if (layer) {
             times = this._getTimesFromLayerCapabilities(layer);
             if (!times) {
-                times = this._getTimesFromLayerCapabilities(layer.parent());
+                times = this._getTimesFromLayerCapabilities(layer.parentNode);
             }
         }
+
         return times;
     },
 
     _getTimesFromLayerCapabilities: function(layer) {
         var times = null;
-        var dimension = layer.find("Dimension[name='time']");
-        if (dimension && dimension.length && dimension[0].textContent.length) {
-            times = dimension[0].textContent.trim();
-        } else {
-            var extent = layer.find("Extent[name='time']");
-            if (extent && extent.length && extent[0].textContent.length) {
-                times = extent[0].textContent.trim();
-            }
+        var nodes = layer.children;
+        for (var i=0, l=nodes.length; i<l; i++){
+            if (nodes[i].nodeName !== 'Extent' && nodes[i].nodeName !== 'Dimension') continue;
+            if (nodes[i].getAttribute('name') !== 'time') continue;
+            if (!nodes[i].textContent.length) continue;
+            times = nodes[i].textContent.trim();
+            break;
         }
         return times;
     },
 
     _getDefaultTimeFromCapabilities: function(xml) {
-        var layers = $(xml).find('Layer[queryable="1"]');
+        var layers = xml.querySelectorAll('Layer[queryable="1"]');
         var layerName = this._baseLayer.wmsParams.layers;
-        if (this._getCapabilitiesAlternateLayerName)
-            layerName = this._getCapabilitiesAlternateLayerName;
-        var layerNameElement = layers.find("Name").filter(function(index) {
-            return $(this).text() === layerName;
-        });
+        var layer = null;
+
+        layers.forEach(function(current) {
+            if (current.querySelector("Name").innerHTML === layerName) {
+                layer = current;
+            }
+        })
+
         var defaultTime = 0;
-        if (layerNameElement) {
-            var layer = layerNameElement.parent();
+        if (layer) {
             defaultTime = this._getDefaultTimeFromLayerCapabilities(layer);
             if (defaultTime == 0) {
-                defaultTime = this._getDefaultTimeFromLayerCapabilities(layer.parent());
+                defaultTime = this._getDefaultTimeFromLayerCapabilities(layer.parentNode);
             }
         }
         return defaultTime;
@@ -331,21 +345,20 @@ L.TimeDimension.Layer.WMS = L.TimeDimension.Layer.extend({
 
     _getDefaultTimeFromLayerCapabilities: function(layer) {
         var defaultTime = 0;
-        var dimension = layer.find("Dimension[name='time']");
-        if (dimension && dimension.attr("default")) {
-            defaultTime = dimension.attr("default");
-        } else {
-            var extent = layer.find("Extent[name='time']");
-            if (extent && extent.attr("default")) {
-                defaultTime = extent.attr("default");
-            }
+        var nodes = layer.children;
+        for (var i=0, l=nodes.length; i<l; i++) {
+            if (nodes[i].nodeName !== 'Extent' && nodes[i].nodeName !== 'Dimension') continue;
+            if (nodes[i].getAttribute('name') !== 'time') continue;
+            if (!nodes[i].attributes.default) continue;
+            if (!nodes[i].attributes.default.textContent.length) continue;
+            defaultTime = nodes[i].attributes.default.textContent.trim();
+            break;
         }
         return defaultTime;
     },
 
-
     setAvailableTimes: function(times) {
-        this._availableTimes = L.TimeDimension.Util.parseTimesExpression(times);
+        this._availableTimes = L.TimeDimension.Util.parseTimesExpression(times, this._period);
         this._updateTimeDimensionAvailableTimes();
     },
 

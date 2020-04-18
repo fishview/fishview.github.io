@@ -13,28 +13,42 @@
 	// Chlorophyll		
 	var TimeLayer1 = L.timeDimension.layer.wms(chla0, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,		
 	});
 	var TimeLayerA = L.timeDimension.layer.wms(chla1, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,		
 	});
 	// SST
 	var TimeLayer2 = L.timeDimension.layer.wms(sst2, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,
 	});
 	var TimeLayerB = L.timeDimension.layer.wms(sst3, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,		
 	});
 	// Velocity	- ovel doesn't need time layer
 	var TimeLayer3 = L.timeDimension.layer.wms(ovel, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,		
 	});	
 	// Oxygen
 	var TimeLayer4 = L.timeDimension.layer.wms(dO2, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,		
 	});
 	// Mixed layer thickness
 	var TimeLayer5 = L.timeDimension.layer.wms(mlt, {
 		updateTimeDimension: false,
+		cacheBackward: 10,
+		cacheForward: 10,		
 	});
 	
 <!-- PSAT Tracks ---!>

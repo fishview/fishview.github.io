@@ -289,6 +289,9 @@
 <!-- Time control -->
 	var timeDimensionControl = new L.Control.TimeDimension({
 				position: 'bottomleft',
+				playReverseButton: true,				
+				minSpeed: 1,
+				speedStep: 1,				
 				autoPlay: true,
 				playerOptions: {
 				buffer: 5,
