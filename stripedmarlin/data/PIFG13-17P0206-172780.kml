@@ -5,7 +5,6 @@
  <name>PIFG13.17P0206.172780</name>
  <Placemark>
  <gx:Track>
- <when>2018-12-18T12:00:00Z</when>
  <when>2018-12-19T12:00:00Z</when>
  <when>2018-12-20T12:00:00Z</when>
  <when>2018-12-21T12:00:00Z</when>
@@ -117,8 +116,9 @@
  <when>2019-04-06T12:00:00Z</when>
  <when>2019-04-07T12:00:00Z</when>
  <when>2019-04-08T12:00:00Z</when>
+ <when>2019-04-09T12:00:00Z</when>
+ <when>2019-04-10T12:00:00Z</when>
  <gx:coord>-151.58 26.09 0</gx:coord>
- <gx:coord>-151.4279548 25.56779765 0</gx:coord>
  <gx:coord>-151.1977755 25.13459489 0</gx:coord>
  <gx:coord>-151.1231294 24.80304401 0</gx:coord>
  <gx:coord>-151.1753205 24.6487216 0</gx:coord>
@@ -228,6 +228,8 @@
  <gx:coord>-152.6822559 15.72884409 0</gx:coord>
  <gx:coord>-152.7185392 15.74051144 0</gx:coord>
  <gx:coord>-152.7476376 15.76638447 0</gx:coord>
+ <gx:coord>-152.9354427 15.36292735 0</gx:coord>
+ <gx:coord>-153.1142168 14.98828246 0</gx:coord>
  <gx:coord>-153.2903954 14.622 0</gx:coord>
  </gx:Track>
  </Placemark>

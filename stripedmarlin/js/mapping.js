@@ -270,6 +270,7 @@
 			'PIFG03-20573-117277': kmlTimeLayer13,
 			'PIFG04-16P1849-169355': kmlTimeLayer14,
 			'PIFG05-20138-115408': kmlTimeLayer15,
+			'PIFG17-16P1575-167342': kmlTimeLayer27,
 			'PIFG06-16P1579-167346': kmlTimeLayer16,
 			'PIFG07-16P1855-169356': kmlTimeLayer17,
 			'PIFG08-16P1580-167347': kmlTimeLayer18,
@@ -514,14 +515,22 @@ var tCtrlOn = 0,
             } else {
                 map.timeDimension.setAvailableTimes(Time26, 'replace');
             }			
-		}
+		} else if (eventLayer.name == 'PIFG17-16P1575-167342') {
+            tOverlay = tOverlay + 1;
+            if (tCtrlOn == 0){
+                timeDimensionControl.addTo(this);
+            } else if (tBlay ==1 & tCtrlOn ==1) {
+                map.timeDimension.setAvailableTimes(Time27, 'union');
+            } else {
+                map.timeDimension.setAvailableTimes(Time27, 'replace');
+            }}
 	});	
 	// Overlay OFF
 	map.on('overlayremove', function(eventLayer) {
 		if (eventLayer.name == 'Sea water velocity') {
 			map.removeControl(legendO);
 			if (tBlay == 0 && tOverlay < 1) {map.removeControl(timeDimensionControl);}
-		} else if (eventLayer.name == 'PIFG-LPRC 20139' || eventLayer.name == 'PIFG01-20139-115409' || eventLayer.name == 'PIFG02-16P1909-169364' || eventLayer.name == 'PIFG03-20573-117277' || eventLayer.name == 'PIFG04-16P1849-169355' || eventLayer.name == 'PIFG05-20138-115408' || eventLayer.name == 'PIFG06-16P1579-167346' || eventLayer.name == 'PIFG07-16P1855-169356' || eventLayer.name == 'PIFG08-16P1580-167347' || eventLayer.name == 'PIFG09-16P1587-167351' || eventLayer.name == 'PIFG10-16P1896-169361' || eventLayer.name == 'PIFG11-16P1916-169365' || eventLayer.name == 'PIFG12-16P2435-172777' || eventLayer.name == 'PIFG13-17P0206-172780' || eventLayer.name == 'PIFG14-17P0213-172782' || eventLayer.name == 'PIFG15-16P1903-169363' || eventLayer.name == 'PIFG16-17P0212-172781') {
+		} else if (eventLayer.name == 'PIFG-LPRC 20139' || eventLayer.name == 'PIFG01-20139-115409' || eventLayer.name == 'PIFG02-16P1909-169364' || eventLayer.name == 'PIFG03-20573-117277' || eventLayer.name == 'PIFG04-16P1849-169355' || eventLayer.name == 'PIFG05-20138-115408' || eventLayer.name == 'PIFG06-16P1579-167346' || eventLayer.name == 'PIFG07-16P1855-169356' || eventLayer.name == 'PIFG08-16P1580-167347' || eventLayer.name == 'PIFG09-16P1587-167351' || eventLayer.name == 'PIFG10-16P1896-169361' || eventLayer.name == 'PIFG11-16P1916-169365' || eventLayer.name == 'PIFG12-16P2435-172777' || eventLayer.name == 'PIFG13-17P0206-172780' || eventLayer.name == 'PIFG14-17P0213-172782' || eventLayer.name == 'PIFG15-16P1903-169363' || eventLayer.name == 'PIFG16-17P0212-172781' || eventLayer.name == 'PIFG17-16P1575-167342' ) {
 			tOverlay = tOverlay - 1
 			if (tBlay == 0 && tOverlay < 1) {map.removeControl(timeDimensionControl);}			
 		}	

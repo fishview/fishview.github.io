@@ -5,7 +5,6 @@
  <name>PIFG06.16P1579.167346</name>
  <Placemark>
  <gx:Track>
- <when>2018-05-28T12:00:00Z</when>
  <when>2018-05-29T12:00:00Z</when>
  <when>2018-05-30T12:00:00Z</when>
  <when>2018-05-31T12:00:00Z</when>
@@ -60,7 +59,6 @@
  <when>2018-07-19T12:00:00Z</when>
  <when>2018-07-27T12:00:00Z</when>
  <gx:coord>-153.655 24.147 0</gx:coord>
- <gx:coord>-153.2878506 23.586668 0</gx:coord>
  <gx:coord>-153.2198751 23.37087984 0</gx:coord>
  <gx:coord>-153.0733872 23.10925154 0</gx:coord>
  <gx:coord>-153.2498743 22.64120049 0</gx:coord>

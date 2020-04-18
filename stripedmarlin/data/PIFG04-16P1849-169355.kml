@@ -5,7 +5,6 @@
  <name>PIFG04.16P1849.169355</name>
  <Placemark>
  <gx:Track>
- <when>2017-12-04T12:00:00Z</when>
  <when>2017-12-05T12:00:00Z</when>
  <when>2017-12-06T12:00:00Z</when>
  <when>2017-12-07T12:00:00Z</when>
@@ -86,7 +85,6 @@
  <when>2018-02-20T12:00:00Z</when>
  <when>2018-02-21T12:00:00Z</when>
  <gx:coord>-154.38 22.63 0</gx:coord>
- <gx:coord>-154.142089 22.22956416 0</gx:coord>
  <gx:coord>-153.7536985 21.84696382 0</gx:coord>
  <gx:coord>-153.4992463 21.31494801 0</gx:coord>
  <gx:coord>-153.2131028 20.71295842 0</gx:coord>

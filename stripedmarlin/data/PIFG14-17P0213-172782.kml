@@ -5,7 +5,6 @@
  <name>PIFG14.17P0213.172782</name>
  <Placemark>
  <gx:Track>
- <when>2019-04-09T12:00:00Z</when>
  <when>2019-04-10T12:00:00Z</when>
  <when>2019-04-11T12:00:00Z</when>
  <when>2019-04-12T12:00:00Z</when>
@@ -32,7 +31,6 @@
  <when>2019-05-03T12:00:00Z</when>
  <when>2019-05-04T12:00:00Z</when>
  <gx:coord>-161.515 25.813 0</gx:coord>
- <gx:coord>-161.4106815 26.17481328 0</gx:coord>
  <gx:coord>-161.12377 26.49116995 0</gx:coord>
  <gx:coord>-161.1717771 26.70987076 0</gx:coord>
  <gx:coord>-161.3502118 26.76313666 0</gx:coord>
