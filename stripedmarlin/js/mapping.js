@@ -204,8 +204,8 @@
 			position: 'bottomleft'
 		});
 		legendA.onAdd = function(map) {
-			var src = alink + '?REQUEST=GetLegendGraphic&LAYER=' + alayer + '&PALETTE=' + app + '&COLORSCALERANGE=' + '16%2C32';
-			var div = L.DomUtil.create('div', 'info legend');
+			var src = alink + '?REQUEST=GetLegendGraphic&LAYER=' + alayer + '&PALETTE=' + app + '&COLORSCALERANGE=' + '16%2C32' + '&transparent=TRUE';
+			var div = L.DomUtil.create('div', 'info2 legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
 			return div;
@@ -215,8 +215,8 @@
 			position: 'bottomleft'
 		});
 		legendB.onAdd = function(map) {
-			var src = "http://my.cmems-du.eu/thredds/wms/global-reanalysis-bio-001-029-daily?REQUEST=GetLegendGraphic&LAYER=chl&PALETTE=ferret&COLORSCALERANGE=0.01%2C4.6416"
-			var div = L.DomUtil.create('div', 'info legend');
+			var src = 'http://my.cmems-du.eu/thredds/wms/global-reanalysis-bio-001-029-daily?REQUEST=GetLegendGraphic&LAYER=chl&PALETTE=ferret&COLORSCALERANGE=0.01%2C4.6416' + '&transparent=TRUE';
+			var div = L.DomUtil.create('div', 'info2 legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
 			return div;
@@ -226,8 +226,8 @@
 			position: 'bottomleft'
 		});
 		legendC.onAdd = function(map) {
-			var src = "http://my.cmems-du.eu/thredds/wms/global-reanalysis-bio-001-029-daily?REQUEST=GetLegendGraphic&LAYER=o2&PALETTE=occam&COLORSCALERANGE=44.661%2C491.271"
-			var div = L.DomUtil.create('div', 'info legend');
+			var src = 'http://my.cmems-du.eu/thredds/wms/global-reanalysis-bio-001-029-daily?REQUEST=GetLegendGraphic&LAYER=o2&PALETTE=occam&COLORSCALERANGE=44.661%2C491.271' + '&transparent=TRUE';
+			var div = L.DomUtil.create('div', 'info2 legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
 			return div;
@@ -237,21 +237,21 @@
 			position: 'bottomleft'
 		});
 		legendD.onAdd = function(map) {
-			var src = "http://my.cmems-du.eu/thredds/wms/global-reanalysis-phy-001-030-daily?REQUEST=GetLegendGraphic&LAYER=mlotst&PALETTE=alg2&COLORSCALERANGE=10%2C160"
-			var div = L.DomUtil.create('div', 'info legend');
+			var src = 'http://my.cmems-du.eu/thredds/wms/global-reanalysis-phy-001-030-daily?REQUEST=GetLegendGraphic&LAYER=mlotst&PALETTE=alg2&COLORSCALERANGE=10%2C160' + '&transparent=TRUE';
+			var div = L.DomUtil.create('div', 'info2 legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
 			return div;
 	};
 	
 	// Overlay layer
-	var olink = dlink + '?REQUEST=GetLegendGraphic&LAYER=' + dlayer + '&PALETTE=' + pp + '&COLORSCALERANGE=' + cc;
+	var olink = dlink + '?REQUEST=GetLegendGraphic&LAYER=' + dlayer + '&PALETTE=' + pp + '&COLORSCALERANGE=' + cc + '&transparent=TRUE';
 	var legendO = L.control({
 			position: 'bottomleft'
 		});
 		legendO.onAdd = function(map) {
-			var src = olink
-			var div = L.DomUtil.create('div', 'info legend');
+			var src = olink;
+			var div = L.DomUtil.create('div', 'info2 legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
 			return div;
