@@ -97,6 +97,13 @@ var sst2 = L.tileLayer.wms(alink,
 			abovemaxcolor:'extend', belowmincolor:'extend',
 		});	
 
+	acc3 = '297.05%2C297.25'; // 23.9 to 24.1 C
+var sst3 = L.tileLayer.wms(alink, 
+		{
+			layers: alayer, numcontours: 1,
+			format: 'image/png', styles: 'contour/greyscale', opacity: 1, COLORSCALERANGE: acc3,
+			transparent: 'TRUE', time: att,
+		});			
 		
 <!-- EU Copernicus ---!>
 // http://marine.copernicus.eu/services-portfolio/access-to-products/

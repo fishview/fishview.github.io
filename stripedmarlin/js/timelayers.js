@@ -21,7 +21,10 @@
 	var TimeLayer2 = L.timeDimension.layer.wms(sst2, {
 		updateTimeDimension: false,
 	});
-	// Velocity	
+	var TimeLayerB = L.timeDimension.layer.wms(sst3, {
+		updateTimeDimension: false,
+	});
+	// Velocity	- ovel doesn't need time layer
 	var TimeLayer3 = L.timeDimension.layer.wms(ovel, {
 		updateTimeDimension: false,
 	});	
