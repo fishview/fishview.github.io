@@ -8,6 +8,7 @@
 			timeDimensionOptions:{
 			timeInterval: "2016-01/2017-08",
 			period: "P1D",
+			loadingTimeout: 9000,
 			},
 	});	
 		

@@ -1,7 +1,7 @@
 <!-- GIS ---!>
 	// Date time
-	var startTime = new Date('2015-01-01T12:00:00.000Z'),
-		endTime = new Date('2015-12-31T12:00:00.000Z'),
+	var startTime = new Date('2017-01-01T12:00:00.000Z'),
+		endTime = new Date('2017-12-31T12:00:00.000Z'),
 		interval = "P3D";
     var Time0 = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
 
@@ -13,42 +13,42 @@
 	// Chlorophyll		
 	var TimeLayer1 = L.timeDimension.layer.wms(chla0, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,		
+		cacheBackward: 5,
+		cacheForward: 5,		
 	});
 	var TimeLayerA = L.timeDimension.layer.wms(chla1, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,		
+		cacheBackward: 5,
+		cacheForward: 5,		
 	});
 	// SST
 	var TimeLayer2 = L.timeDimension.layer.wms(sst2, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,
+		cacheBackward: 5,
+		cacheForward: 5,
 	});
 	var TimeLayerB = L.timeDimension.layer.wms(sst3, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,		
+		cacheBackward: 5,
+		cacheForward: 5,		
 	});
 	// Velocity	- ovel doesn't need time layer
 	var TimeLayer3 = L.timeDimension.layer.wms(ovel, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,		
+		cacheBackward: 5,
+		cacheForward: 5,		
 	});	
 	// Oxygen
 	var TimeLayer4 = L.timeDimension.layer.wms(dO2, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,		
+		cacheBackward: 5,
+		cacheForward: 5,		
 	});
 	// Mixed layer thickness
 	var TimeLayer5 = L.timeDimension.layer.wms(mlt, {
 		updateTimeDimension: false,
-		cacheBackward: 10,
-		cacheForward: 10,		
+		cacheBackward: 5,
+		cacheForward: 5,		
 	});
 	
 <!-- PSAT Tracks ---!>
