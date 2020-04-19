@@ -6,9 +6,9 @@
 			layers: [darkmap, coastline],
 			timeDimension: true,
 			timeDimensionOptions:{
-			timeInterval: "2016-01/2017-08",
+			timeInterval: "2016-06/2019-06",
 			period: "P1D",
-			loadingTimeout: 9000,
+			loadingTimeout: 15000,
 			},
 	});	
 		
