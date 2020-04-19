@@ -105,11 +105,18 @@ var startTime = new Date('2018-02-25TT12:00:00.000Z'), endTime = new Date('2018-
 var Time27 = L.TimeDimension.Util.explodeTimeRange(startTime, endTime, interval);
 
 	//Tracks
+var lstyle1 = {
+			"color": "#FAF3DD",
+            "weight": 5,
+            "opacity": 0.8,
+};
+	
 var icon11 = L.icon({ 
         iconUrl: 'css/images/icon11.png', 
         iconSize: [80, 40], 
         iconAnchor: [5, 25] }); 
-    var customLayer11 = L.geoJson(null, { 
+    var customLayer11 = L.geoJson(null, {
+          style: lstyle1,		
           pointToLayer: function (feature, latLng) { 
             if (feature.properties.hasOwnProperty('last')) { 
                 return new L.Marker(latLng, { 
