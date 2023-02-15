@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <kml xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2">
+ <Folder>
+ <name>PIFG17.16P1575.167342</name>
+ <Placemark>
+ <gx:Track>
+ <when>2018-02-25T12:00:00Z</when>
+ <when>2018-02-26T12:00:00Z</when>
+ <when>2018-02-27T12:00:00Z</when>
+ <when>2018-02-28T12:00:00Z</when>
+ <when>2018-03-01T12:00:00Z</when>
+ <when>2018-03-02T12:00:00Z</when>
+ <when>2018-03-03T12:00:00Z</when>
+ <when>2018-03-04T12:00:00Z</when>
+ <when>2018-03-05T12:00:00Z</when>
+ <when>2018-03-06T12:00:00Z</when>
+ <when>2018-03-07T12:00:00Z</when>
+ <when>2018-03-08T12:00:00Z</when>
+ <when>2018-03-09T12:00:00Z</when>
+ <when>2018-03-10T12:00:00Z</when>
+ <when>2018-03-11T12:00:00Z</when>
+ <gx:coord>-134.567 19.695 0</gx:coord>
+ <gx:coord>-134.7804837 19.5753379 0</gx:coord>
+ <gx:coord>-134.8600575 19.51212168 0</gx:coord>
+ <gx:coord>-134.8851944 19.43906128 0</gx:coord>
+ <gx:coord>-135.0310539 19.38446945 0</gx:coord>
+ <gx:coord>-135.156089 19.35103309 0</gx:coord>
+ <gx:coord>-135.2154948 19.29951039 0</gx:coord>
+ <gx:coord>-135.3015886 19.26111623 0</gx:coord>
+ <gx:coord>-135.3215053 19.23171442 0</gx:coord>
+ <gx:coord>-135.3084073 19.19146704 0</gx:coord>
+ <gx:coord>-135.2453535 19.13685824 0</gx:coord>
+ <gx:coord>-135.3028872 19.08253614 0</gx:coord>
+ <gx:coord>-135.3920051 19.00838972 0</gx:coord>
+ <gx:coord>-135.5027741 18.95831626 0</gx:coord>
+ <gx:coord>-135.732489 18.88 0</gx:coord>
+ </gx:Track>
+ </Placemark>
+ </Folder>
+ </kml>

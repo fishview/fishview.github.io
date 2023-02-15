@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <kml xmlns="http://www.opengis.net/kml/2.2"
+  xmlns:gx="http://www.google.com/kml/ext/2.2">
+ <Folder>
+ <name>PIFG14.17P0213.172782</name>
+ <Placemark>
+ <gx:Track>
+ <when>2019-04-10T12:00:00Z</when>
+ <when>2019-04-11T12:00:00Z</when>
+ <when>2019-04-12T12:00:00Z</when>
+ <when>2019-04-13T12:00:00Z</when>
+ <when>2019-04-14T12:00:00Z</when>
+ <when>2019-04-15T12:00:00Z</when>
+ <when>2019-04-16T12:00:00Z</when>
+ <when>2019-04-17T12:00:00Z</when>
+ <when>2019-04-18T12:00:00Z</when>
+ <when>2019-04-19T12:00:00Z</when>
+ <when>2019-04-20T12:00:00Z</when>
+ <when>2019-04-21T12:00:00Z</when>
+ <when>2019-04-22T12:00:00Z</when>
+ <when>2019-04-23T12:00:00Z</when>
+ <when>2019-04-24T12:00:00Z</when>
+ <when>2019-04-25T12:00:00Z</when>
+ <when>2019-04-26T12:00:00Z</when>
+ <when>2019-04-27T12:00:00Z</when>
+ <when>2019-04-28T12:00:00Z</when>
+ <when>2019-04-29T12:00:00Z</when>
+ <when>2019-04-30T12:00:00Z</when>
+ <when>2019-05-01T12:00:00Z</when>
+ <when>2019-05-02T12:00:00Z</when>
+ <when>2019-05-03T12:00:00Z</when>
+ <when>2019-05-04T12:00:00Z</when>
+ <gx:coord>-161.515 25.813 0</gx:coord>
+ <gx:coord>-161.12377 26.49116995 0</gx:coord>
+ <gx:coord>-161.1717771 26.70987076 0</gx:coord>
+ <gx:coord>-161.3502118 26.76313666 0</gx:coord>
+ <gx:coord>-161.4327711 26.65847219 0</gx:coord>
+ <gx:coord>-161.364807 26.55548154 0</gx:coord>
+ <gx:coord>-161.8009275 26.47761704 0</gx:coord>
+ <gx:coord>-162.0703457 26.34724448 0</gx:coord>
+ <gx:coord>-162.2193742 26.24456366 0</gx:coord>
+ <gx:coord>-162.4497014 26.38168476 0</gx:coord>
+ <gx:coord>-162.7589489 26.48085812 0</gx:coord>
+ <gx:coord>-162.7830344 26.31155011 0</gx:coord>
+ <gx:coord>-162.9927552 25.97243299 0</gx:coord>
+ <gx:coord>-163.1374068 25.84867683 0</gx:coord>
+ <gx:coord>-162.886151 25.7556677 0</gx:coord>
+ <gx:coord>-162.8122148 25.63183643 0</gx:coord>
+ <gx:coord>-162.768383 25.5922497 0</gx:coord>
+ <gx:coord>-162.3433152 25.49355161 0</gx:coord>
+ <gx:coord>-162.0310489 25.30413009 0</gx:coord>
+ <gx:coord>-161.7603727 25.14344073 0</gx:coord>
+ <gx:coord>-161.1631313 24.90645783 0</gx:coord>
+ <gx:coord>-161.0326184 24.70610841 0</gx:coord>
+ <gx:coord>-160.9540376 24.42853287 0</gx:coord>
+ <gx:coord>-161.1607786 23.76175309 0</gx:coord>
+ <gx:coord>-163.1304964 22.643 0</gx:coord>
+ </gx:Track>
+ </Placemark>
+ </Folder>
+ </kml>
