@@ -82,7 +82,7 @@ var sst = L.tileLayer(template, {
 var alink = 'http://oceanwatch.pfeg.noaa.gov/thredds/wms/satellite/MUR41/ssta/1day',
 	app = 'sst32',
 		alayer = 'analysed_sst',
-		acc = '273.15%2C305.15', // 0 to 32 C
+		acc = '273.15%2C283.15', // 0 to 10 C
 		att = '2016-08-01T09:00:00.000Z';
 
 	alink = 'http://nrt.cmems-du.eu/thredds/wms/METOFFICE-GLO-SST-L4-NRT-OBS-SST-V2';
@@ -97,7 +97,7 @@ var sst2 = L.tileLayer.wms(alink,
 			abovemaxcolor:'extend', belowmincolor:'extend',
 		});
 
-	acc3 = '275.65%2C277.15'; // 2.5 to 4 C
+	acc3 = '275.65%2C277.15'; // 4 to 4 C
 var sst3 = L.tileLayer.wms(alink,
 		{
 			layers: alayer, numcontours: 1,

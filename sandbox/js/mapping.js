@@ -205,7 +205,7 @@
 			position: 'bottomleft'
 		});
 		legendA.onAdd = function(map) {
-			var src = alink + '?REQUEST=GetLegendGraphic&LAYER=' + alayer + '&PALETTE=' + app + '&COLORSCALERANGE=' + '0%2C32' + '&transparent=TRUE';
+			var src = alink + '?REQUEST=GetLegendGraphic&LAYER=' + alayer + '&PALETTE=' + app + '&COLORSCALERANGE=' + '0%2C10' + '&transparent=TRUE';
 			var div = L.DomUtil.create('div', 'info2 legend');
 			div.innerHTML +=
 				'<img src="' + src + '" alt="legend">';
