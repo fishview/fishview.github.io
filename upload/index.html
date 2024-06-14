@@ -78,7 +78,7 @@
     function handleChangeEvent(e) {
       console.log('change event payload:', e);
       // Display preview below
-      renderFiles(e.detail.allEntries.filter(f => f.status === 'success'));
+      // renderFiles(e.detail.allEntries.filter(f => f.status === 'success'));
       // List file names
       listFiles(e.detail.allEntries.filter(f => f.status === 'success'));
       // List unique URLs
