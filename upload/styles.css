@@ -1,5 +1,5 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, 'Roboto', Arial, sans-serif;
     font-size: 14px;
     padding: 12px;
 }
@@ -10,12 +10,12 @@ p {
 }
 
 a:link, a:hover, a:active, a:visited {
-    color: blue;
+    color: #008080;
     text-decoration: none;
 }
 
 a:hover {
-    color: darkblue;
+    color: #20B2AA;
 }
 
 hr {
