@@ -94,7 +94,7 @@
         return lfiles;
       });
       // Do something
-      document.getElementById("frmFiles").value = lfiles;
+      document.getElementById("frmFiles").value = lfiles.substring(1);
     }
 
     function listFiles2(files) {
@@ -104,7 +104,7 @@
         return lfiles;
       });
       // Do something
-      document.getElementById("frmUrls").value = lfiles;
+      document.getElementById("frmUrls").value = lfiles.substring(1);
     }
 
     function formatSize(bytes) {
@@ -120,7 +120,8 @@
 
   </script>
 
-  <h3>Please share with us your contact information (optional)</h3>
+  <h3 style="color:SlateGray">Please share (at a minimum) your contact email/ phone number </h3>
+  <h4><i>... just in case we need to ask you a quick question, thanks!</i></h4>
   <form action="https://docs.google.com/forms/d/e/1FAIpQLSdL_Rx1HiLS5QdtVfhn6Y9gv2-JCySZfJSpwjreq8ONpEwMRw/formResponse" method="POST">
     <label>Name:</label><br>
     <input type="text" name="entry.948710931"><br>
@@ -128,10 +129,8 @@
     <input type="text" name="entry.961002918"><br>
     <label>Email:</label><br>
     <input type="text" name="entry.2091453718"><br>
-    <label>Filename:</label><br>
-    <input id="frmFiles" type="text" name="entry.1037652762"><br>
-    <label>Media URL:</label><br>
-    <input id="frmUrls" type="text" name="entry.1061286133"><br>
+    <input id="frmFiles" type="hidden" name="entry.1037652762">
+    <input id="frmUrls" type="hidden" name="entry.1061286133">
     <br>
     <input type="submit" value="Submit">
   </form>
