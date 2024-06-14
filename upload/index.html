@@ -11,18 +11,37 @@
   <link rel="stylesheet" href="./styles.css">
 
   <style>
+  input[type=text], select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
   input[type=submit] {
+    width: 50%;
     background-color: #20B2AA;
-    font-size: 16px;
-    border: none;
     color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
     border-radius: 6px;
-    width: 40%;
+    cursor: pointer;
+    font-size: 16px;
     font-weight: bold;
+  }
+
+  input[type=submit]:hover {
+    background-color: #008080;
+  }
+
+  div {
+    border-radius: 1px;
+    background-color: #f2f2f2;
+    padding: 2px;
   }
   </style>
 
