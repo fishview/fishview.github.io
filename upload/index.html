@@ -52,6 +52,8 @@
       renderFiles(e.detail.allEntries.filter(f => f.status === 'success'));
       // List file names
       listFiles(e.detail.allEntries.filter(f => f.status === 'success'));
+      // List unique URLs
+      listFiles2(e.detail.allEntries.filter(f => f.status === 'success'));
     }
 
     function renderFiles(files) {
@@ -95,6 +97,16 @@
       document.getElementById("frmFiles").value = lfiles;
     }
 
+    function listFiles2(files) {
+      var lfiles = "";
+      const listedFiles = files.map(file => {
+        lfiles = lfiles + ";" + file.cdnUrl;
+        return lfiles;
+      });
+      // Do something
+      document.getElementById("frmUrls").value = lfiles;
+    }
+
     function formatSize(bytes) {
       if (!bytes) return '0 Bytes';
 
@@ -118,6 +130,8 @@
     <input type="text" name="entry.2091453718"><br>
     <label>Filename:</label><br>
     <input id="frmFiles" type="text" name="entry.1037652762"><br>
+    <label>Media URL:</label><br>
+    <input id="frmUrls" type="text" name="entry.1061286133"><br>
     <br>
     <input type="submit" value="Submit">
   </form>
