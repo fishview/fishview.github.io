@@ -130,7 +130,7 @@
       var lfiles = "";
       var dummy = "";
       const listedFiles = files.map(file => {
-        dummy = fileInfo.cdnUrl + fileInfo.name;
+        dummy = file.fileInfo.cdnUrl + file.fileInfo.name;
         lfiles = lfiles + ";" + dummy;
         return lfiles;
       });
