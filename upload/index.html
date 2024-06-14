@@ -128,8 +128,10 @@
 
     function listFiles2(files) {
       var lfiles = "";
+      var dummy = "";
       const listedFiles = files.map(file => {
-        lfiles = lfiles + ";" + file.cdnUrl;
+        dummy = fileInfo.cdnUrl + fileInfo.name;
+        lfiles = lfiles + ";" + dummy;
         return lfiles;
       });
       // Do something
