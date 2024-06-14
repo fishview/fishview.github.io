@@ -9,15 +9,19 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.39.0/web/lr-file-uploader-minimal.min.css">
   <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
+
   <p>
     <a href="https://tunalab.org/tagatiny.htm">← Large Pelagics Research Center</a>
   </p>
+
   <h1>Tag-A-Tiny tagging card online submission</h1>
   <h2 style="color:SteelBlue;font-family:Arial"><i>Send us your tagging card (and any other pictures you want) by clicking "Choose file" below</i></h2>
   <p><i>Note</i>: we only support uploading a single image file (< 10 Mb) each time </p>
   <p> You will see an image preview when an upload is completed. Please click "+" if you want to send us more pictures, thanks!</p>
   <hr>
+
   <lr-config
     ctx-name="my-uploader"
     pubkey="1a177584ce1142e46caf"
@@ -40,22 +44,20 @@
     const providerNode = document.getElementById('my-uploader-provider');
     const previewsNode = document.getElementById('previews');
 
-    /*
-      Note: Event binding is the main way to get data and other info from File Uploader.
-      There plenty of events you may use.
-
-      See more: https://uploadcare.com/docs/file-uploader/events/
-     */
     providerNode.addEventListener('change', handleChangeEvent);
 
     function handleChangeEvent(e) {
       console.log('change event payload:', e);
-
+      // Display preview below
       renderFiles(e.detail.allEntries.filter(f => f.status === 'success'));
+      // List file names
+      listFiles(e.detail.allEntries.filter(f => f.status === 'success'));
     }
 
     function renderFiles(files) {
       const renderedFiles = files.map(file => {
+
+        // Original code
         const fileNode = document.createElement('div');
         fileNode.setAttribute('class', 'preview-wrapper');
 
@@ -79,8 +81,18 @@
 
         return fileNode;
       });
-
+      // Show preview
       previewsNode.replaceChildren(...renderedFiles);
+    }
+
+    function listFiles(files) {
+      var lfiles = "";
+      const listedFiles = files.map(file => {
+        lfiles = lfiles + ";" + file.fileInfo.originalFilename;
+        return lfiles;
+      });
+      // Do something
+      document.getElementById("frmFiles").value = lfiles;
     }
 
     function formatSize(bytes) {
@@ -93,8 +105,23 @@
 
       return `${parseFloat((bytes / k ** i).toFixed(2))} ${sizes[i]}`;
     }
+
   </script>
-  <br>
+
+  <h3>Please share with us your contact information (optional)</h3>
+  <form action="https://docs.google.com/forms/d/e/1FAIpQLSdL_Rx1HiLS5QdtVfhn6Y9gv2-JCySZfJSpwjreq8ONpEwMRw/formResponse" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="entry.948710931"><br>
+    <label>Phone:</label><br>
+    <input type="text" name="entry.961002918"><br>
+    <label>Email:</label><br>
+    <input type="text" name="entry.2091453718"><br>
+    <label>Filename:</label><br>
+    <input id="frmFiles" type="text" name="entry.1037652762"><br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
   <hr>
   <p>© Large Pelagics Research Center. Gloucester, MA 01930.  All Rights Reserved. </p>
 
